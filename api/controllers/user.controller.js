@@ -3,7 +3,7 @@ import User from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 
 // Controller for creating a new user
-export const createUser = async (req, res) => {
+export const createUser = async (req, res,next) => {
     try {
       // Extract password from the request body
       const { password, ...userData } = req.body;
@@ -17,9 +17,10 @@ export const createUser = async (req, res) => {
         password: hashedPassword,
       });
   
+      
       res.status(201).json(newUser);
     } catch (error) {
-      res.status(400).json({ message: error.message });
+        next(error);
     }
   };
 

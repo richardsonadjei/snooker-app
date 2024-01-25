@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.routes.js';
+
 dotenv.config();
 
 mongoose
@@ -14,18 +15,26 @@ mongoose
   });
 
 const app = express();
+
 // Add body-parser middleware to parse JSON data
 app.use(express.json());
 
+// Routes
 app.use('/api/', userRouter);
 
+// Global error handling middleware
+app.use((error, req, res, next) => {
+  const statusCode = error.statusCode || 500;
+  const message = error.message || 'Internal Server Error';
+  return res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message,
+  });
+});
 
 
-
-
-
-
-app.listen(3000, () => {
-   
-  console.log('Server is running on port 3000!');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}!`);
 });

@@ -1,0 +1,56 @@
+/* Header */
+
+.custom-navbar {
+  background: linear-gradient(135deg, #673ab7, #009688);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo-img {
+  max-height: 40px;
+  display: block;
+  margin-right: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav Menu Styles */
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+}
+
+.text-dark {
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.text-dark:hover {
+  transform: translateY(-5px);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

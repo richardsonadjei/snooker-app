@@ -25,18 +25,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  ghanaCardNumber: {
-    type: String,
-    required: true
-  },
-  witnessName: {
-      type: String,
-      required: true
-    },
-  witnessContact: {
-      type: String,
-      required: true
-    },
+
   role: {
     type: String,
     enum: ['ceo','manager', 'employee',],

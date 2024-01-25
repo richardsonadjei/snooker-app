@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from './routes/user.routes.js';
 dotenv.config();
 
 mongoose
@@ -13,6 +14,16 @@ mongoose
   });
 
 const app = express();
+// Add body-parser middleware to parse JSON data
+app.use(express.json());
+
+app.use('/api/', userRouter);
+
+
+
+
+
+
 
 app.listen(3000, () => {
    

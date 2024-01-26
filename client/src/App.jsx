@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import SignOut from './pages/SignOut';
 import Home from './pages/Home';
-import SignUp from './pages/SignUp';
 import Header from './components/Header';
 import Profile from './Pages/Profile';
+import SignUp from './Pages/SignUp';
 
 export default function App() {
 

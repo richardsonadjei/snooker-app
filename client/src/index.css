@@ -54,3 +54,65 @@
   color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+/* SIGNUP */
+
+
+body {
+  background-color: #f8f9fa; /* Bootstrap default background color */
+  color: black;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+
+
+.alert {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.alert-success {
+  background-color: #d4edda; /* Bootstrap success alert background color */
+  color: #155724; /* Bootstrap success alert text color */
+  border: 1px solid #c3e6cb; /* Bootstrap success alert border color */
+}
+
+.alert-danger {
+  background-color: #f8d7da; /* Bootstrap danger alert background color */
+  color: #721c24; /* Bootstrap danger alert text color */
+  border: 1px solid #f5c6cb; /* Bootstrap danger alert border color */
+}
+
+

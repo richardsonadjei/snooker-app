@@ -6,6 +6,7 @@ import {
   getUserById,
   updateUserById,
   deleteUserById,
+  signin,
 } from '../controllers/user.controller.js';
 
 // Create an Express Router
@@ -27,6 +28,9 @@ userRouter.put('/update-user/:id', updateUserById);
 
 // Delete a user by ID
 userRouter.delete('/delete-user/:id', deleteUserById);
+userRouter.post('/signin', signin);
+
+
 
 // Export the router
 export default userRouter;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
 
-const SignUp = () => {
+const CreateNewUser = () => {
   const [formData, setFormData] = useState({
     name: '',
     userName: '',
@@ -193,4 +193,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default CreateNewUser;

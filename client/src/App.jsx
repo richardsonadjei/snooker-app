@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignUp from './pages/SignUp';
+
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
 import SignOut from './Pages/SignOut';
@@ -11,6 +11,9 @@ import RecordOtherExpense from './Pages/OtherExpense';
 import AllExpenseReport from './Pages/reports/AllExpenseReport';
 import SignIn from './pages/SignIn';
 import Home from './pages/Home';
+import CreateNewUser from './pages/Signup';
+
+
 
 
 
@@ -21,7 +24,7 @@ export default function App() {
       <Routes>
         
         <Route path='/sign-in' element={<SignIn/>} />
-        <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='/sign-up' element={<CreateNewUser/>} />
         <Route path='/sign-out' element={<SignOut />} />
         <Route element={<PrivateRoute />}>
           <Route path='/' element={<Home/>} />

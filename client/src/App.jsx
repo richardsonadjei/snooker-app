@@ -9,11 +9,9 @@ import SalesReportWithinAPeriod from './Pages/reports/SalesReportWithinAPeriod';
 import RecordMaintenance from './Pages/MaintenanceExpense';
 import RecordOtherExpense from './Pages/OtherExpense';
 import AllExpenseReport from './Pages/reports/AllExpenseReport';
-
-import SignIn from './pages/SignIn';
-
-import Home from './pages/Home';
+import SignIn from './Pages/SignIn';
 import CreateNewUser from './Pages/NewUser';
+import Home from './Pages/Home';
 
 
 

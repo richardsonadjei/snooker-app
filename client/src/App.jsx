@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
 import SignUp from './pages/Signup';
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
@@ -11,6 +10,7 @@ import SalesReportWithinAPeriod from './Pages/reports/SalesReportWithinAPeriod';
 import RecordMaintenance from './Pages/MaintenanceExpense';
 import RecordOtherExpense from './Pages/OtherExpense';
 import AllExpenseReport from './Pages/reports/AllExpenseReport';
+import SignIn from './pages/SignIn';
 
 
 export default function App() {

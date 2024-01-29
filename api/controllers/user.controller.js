@@ -48,22 +48,6 @@ export const getUserById = async (req, res) => {
   }
 };
 
-// Controller for updating a user by ID
-export const updateUserById = async (req, res) => {
-  try {
-    const updatedUser = await User.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
-    if (!updatedUser) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-    res.status(200).json(updatedUser);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
 
 // Controller for deleting a user by ID
 export const deleteUserById = async (req, res) => {
@@ -125,4 +109,61 @@ export const signin = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+};
+
+export const updateProfile = async (req, res, next) => {
+  const userId = req.params.id;
+  const { userName, email, password, newPassword, confirmPassword } = req.body;
+
+  try {
+    // Authentication check
+    if (req.user.id !== userId) {
+      return res.status(401).json({ success: false, statusCode: 401, message: 'You can only update your own account!' });
+    }
+
+    // Check if the user exists
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ success: false, statusCode: 404, message: 'User not found!' });
+    }
+
+    // Update userName and email fields
+    user.userName = userName;
+    user.email = email;
+
+    // Update password if provided
+    if (password && newPassword !== confirmPassword) {
+      return res.status(400).json({ success: false, statusCode: 400, message: "New password and confirm password don't match." });
+    }
+
+    if (newPassword) {
+      // Hash the new password before saving
+      const saltRounds = 10;
+      const hashedPassword = await bcryptjs.hash(newPassword, saltRounds);
+      user.password = hashedPassword;
+    }
+
+    // Save the updated user
+    await user.save();
+
+    // Respond with the updated user (excluding sensitive information)
+    const { password: userPassword, ...rest } = user._doc;
+    res.status(200).json({ success: true, statusCode: 200, ...rest });
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+
+
+
+
+// auth.controller.js
+export const signout = (req, res) => {
+  // Clear the token cookie to sign the user out
+  res.clearCookie('access_token', { httpOnly: true });
+  
+  // Send a response indicating successful sign out
+  res.status(200).json({ success: true, message: 'User signed out successfully!' });
 };

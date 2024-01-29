@@ -116,3 +116,72 @@ input {
 }
 
 
+/* HOME PAGE */
+/* Home.css */
+
+.home-container {
+  background-image: url('/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* GAME RECORD MODAL */
+/* Add this to your CSS file */
+.modal-custom-style {
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Example background gradient */
+  border-radius: 10px; /* Example border-radius */
+  padding: 20px; /* Example padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box-shadow */
+}
+
+/* Customize the styles further based on your preferences */
+/* YourComponent.css */
+
+.custom-card-style {
+  background-color: #fff; /* Set background color for the card */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  padding: 20px; /* Add padding to the card */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  transition: box-shadow 0.3s ease; /* Add a transition effect for box shadow */
+}
+
+.custom-card-style:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
+}
+
+.custom-input-style {
+  width: 100%; /* Make the input fields take full width */
+  padding: 10px; /* Add padding to the input fields */
+  margin-bottom: 15px; /* Add margin at the bottom of the input fields */
+  border: 1px solid #ddd; /* Add a border to the input fields */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  transition: border-color 0.3s ease; /* Add a transition effect for border color */
+}
+
+.custom-input-style:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.custom-button-style {
+  width: 100%; /* Make the button take full width */
+  padding: 12px; /* Add padding to the button */
+  background-color: #007bff; /* Set background color for the button */
+  color: #fff; /* Set text color for the button */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Add a transition effect for background color */
+}
+
+.custom-button-style:hover {
+  background-color: #0056b3; /* Adjust background color on hover */
+}

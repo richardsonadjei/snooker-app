@@ -4,9 +4,10 @@ import {
   createUser,
   getAllUsers,
   getUserById,
-  updateUserById,
   deleteUserById,
   signin,
+  updateProfile,
+  signout,
 } from '../controllers/user.controller.js';
 
 // Create an Express Router
@@ -24,11 +25,14 @@ userRouter.get('/get-users', getAllUsers);
 userRouter.get('/get-user/:id', getUserById);
 
 // Update a user by ID
-userRouter.put('/update-user/:id', updateUserById);
+userRouter.put('/update-user/:id', updateProfile);
 
 // Delete a user by ID
 userRouter.delete('/delete-user/:id', deleteUserById);
+
+
 userRouter.post('/signin', signin);
+userRouter.post('/signout', signout);
 
 
 

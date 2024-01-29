@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
 import SignOut from './Pages/SignOut';

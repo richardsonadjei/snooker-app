@@ -11,7 +11,7 @@ const AllExpenseReport = () => {
 
     try {
       // Fetch data from the backend
-      const response = await fetch(`/api/all-expenses?startDate=${startDate}&endDate=${endDate}`);
+      const response = await fetch(`/api/all-expen?startDate=${startDate}&endDate=${endDate}`);
       const data = await response.json();
 
       if (response.ok) {

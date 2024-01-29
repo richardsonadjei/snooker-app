@@ -19,15 +19,15 @@ export default function App() {
       <Header />
       <Routes>
         
-        <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sign-in' element={<SignIn/>} />
+        <Route path='/sign-up' element={<SignUp/>} />
         <Route path='/sign-out' element={<SignOut />} />
         <Route element={<PrivateRoute />}>
         
-          <Route path='/' element={<Home />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/total-daily-sales' element={<TotalDailySalesReport />} />
-          <Route path='/sales-report-within-a-period' element={<SalesReportWithinAPeriod />} />
+          <Route path='/' element={<Home/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/total-daily-sales' element={<TotalDailySalesReport/>} />
+          <Route path='/sales-report-within-a-period' element={<SalesReportWithinAPeriod/>} />
           <Route path='/add-maintenance-expense' element={<RecordMaintenance/>} />
           <Route path='/add-other-expense' element={<RecordOtherExpense/>} />
           <Route path='/all-expense-report' element={<AllExpenseReport/>} />

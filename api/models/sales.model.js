@@ -13,7 +13,7 @@ const snookerSaleSchema = new mongoose.Schema({
   },
   unitPricePerGame: {
     type: Number,
-    default: 2, // Set default value to 5
+    default: 2, 
   },
   numberOfGames: {
     type: Number,

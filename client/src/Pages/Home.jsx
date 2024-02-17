@@ -21,7 +21,6 @@ const Home = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          unitPricePerGame: 5,
           numberOfGames: parseInt(saleAmount, 10),
           recordedBy: currentUser ? currentUser.userName : '',
         }),

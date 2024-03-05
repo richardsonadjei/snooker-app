@@ -185,3 +185,92 @@ input {
 .custom-button-style:hover {
   background-color: #0056b3; /* Adjust background color on hover */
 }
+
+
+/* EXPENSE REPORT */
+.expense-report {
+  padding: 20px;
+}
+
+.date-selection {
+  margin-bottom: 20px;
+}
+
+.date-selection form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.date-selection label {
+  margin-right: 10px;
+}
+
+.date-selection input[type='date'] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date-selection button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.date-selection button:hover {
+  background-color: #45a049;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.expense-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  text-align: left;
+}
+
+.expense-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.summary-table {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.summary-table th {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.summary-table td {
+  padding: 10px;
+}
+
+.summary-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.summary-table tr:hover {
+  background-color: #ddd;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}

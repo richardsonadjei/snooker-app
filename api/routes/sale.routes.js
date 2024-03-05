@@ -19,8 +19,8 @@ saleRouter.get('/view-snooker-sales', getAllSnookerSales); // Get all SnookerSal
 saleRouter.get('/snooker-sales/:id', getSnookerSaleById); // Get a specific SnookerSale by ID
 saleRouter.put('/update-snooker-sales/:id', updateSnookerSale); // Update a SnookerSale by ID
 saleRouter.delete('/delete-snooker-sales/:id', deleteSnookerSale); // Delete a SnookerSale by ID
-saleRouter.get('/sales/today', getAllSalesMadeToday);
-saleRouter.get('/sales/within-period', getSalesWithinPeriod);
+saleRouter.get('/sales-today', getAllSalesMadeToday);
+saleRouter.get('/sales-within-period', getSalesWithinPeriod);
 
 
 // Export the router

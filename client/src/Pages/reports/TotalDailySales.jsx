@@ -16,7 +16,7 @@ const TotalDailySalesReport = () => {
   const fetchTotalDailySalesReport = async () => {
     try {
       // Fetch total daily sales report
-      const response = await fetch('/api/sales/today');
+      const response = await fetch('/api/sales-today');
       const data = await response.json();
 
       if (response.ok) {

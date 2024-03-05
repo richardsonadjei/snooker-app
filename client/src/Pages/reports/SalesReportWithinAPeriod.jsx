@@ -15,7 +15,7 @@ const SalesReportWithinAPeriod = () => {
 
     try {
       // Fetch sales report within the specified period
-      const response = await fetch(`/api/sales/within-period?startDate=${startDate}&endDate=${endDate}`);
+      const response = await fetch(`/api/sales-within-period?startDate=${startDate}&endDate=${endDate}`);
       const data = await response.json();
 
       if (response.ok) {

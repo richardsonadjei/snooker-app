@@ -89,7 +89,7 @@ const SalesAndExpensesWithinPeriod = () => {
           {salesAndExpenses && (
             <div className="table-container">
               <div className="profit">
-                <h3>Profit</h3>
+                <h3>Summary</h3>
                 <p>Total Sales: <span style={{ color: 'blue', fontWeight: 'bold' }}>{totalSalesAmount}</span></p>
                 <p>Total Expenses: <span style={{ color: 'red', fontWeight: 'bold' }}>{totalExpensesAmount}</span></p>
                 <p style={{ color: 'green', fontWeight: 'bold' }}>Profit: {profit}</p>

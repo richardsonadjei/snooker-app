@@ -70,7 +70,7 @@ export default function Header() {
                 Expenditure Report 
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/profit">
-                Proit Report
+                Profit Report
               </NavDropdown.Item>
               {/* Add more reports as needed */}
             </NavDropdown>

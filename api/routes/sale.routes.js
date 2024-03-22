@@ -8,6 +8,7 @@ import {
   deleteSnookerSale,
   getAllSalesMadeToday,
   getSalesWithinPeriod,
+  getSalesAndExpensesWithinPeriod,
 } from '../controllers/sale.controller.js';
 
 // Create an Express router
@@ -21,6 +22,7 @@ saleRouter.put('/update-snooker-sales/:id', updateSnookerSale); // Update a Snoo
 saleRouter.delete('/delete-snooker-sales/:id', deleteSnookerSale); // Delete a SnookerSale by ID
 saleRouter.get('/sales-today', getAllSalesMadeToday);
 saleRouter.get('/sales-within-period', getSalesWithinPeriod);
+saleRouter.get('/get-sales-and-expenses', getSalesAndExpensesWithinPeriod);
 
 
 // Export the router

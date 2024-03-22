@@ -69,7 +69,7 @@ export default function Header() {
               <NavDropdown.Item as={Link} to="/all-expense-report">
                 Expenditure Report 
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/all-expense-report">
+              <NavDropdown.Item as={Link} to="/profit">
                 Proit Report
               </NavDropdown.Item>
               {/* Add more reports as needed */}

@@ -121,3 +121,56 @@ export const getSalesWithinPeriod = async (req, res) => {
     res.status(500).json({ success: false, message: 'Internal Server Error' });
   }
 };
+
+
+
+import MaintenanceExpense from "../models/maintenanceExpense.model.js";
+import OtherExpense from "../models/otherExpense.model.js";
+
+export const getSalesAndExpensesWithinPeriod = async (req, res) => {
+  try {
+    const { startDate, endDate } = req.query;
+    const parsedStartDate = new Date(`${startDate}T00:00:00Z`);
+    const parsedEndDate = new Date(`${endDate}T23:59:59.999Z`);
+
+    // Fetch all SnookerSales within the specified period
+    const snookerSalesWithinPeriod = await SnookerSale.find({
+      createdAt: { $gte: parsedStartDate, $lte: parsedEndDate },
+    });
+
+    // Fetch all maintenance expenses within the specified period
+    const maintenanceExpenses = await MaintenanceExpense.find({
+      date: { $gte: parsedStartDate, $lte: parsedEndDate },
+    });
+
+    // Fetch all other expenses within the specified period
+    const otherExpenses = await OtherExpense.find({
+      date: { $gte: parsedStartDate, $lte: parsedEndDate },
+    });
+
+    // Calculate total sales within the period
+  
+const totalSales = snookerSalesWithinPeriod.reduce((acc, sale) => acc + sale.totalAmount, 0);
+
+
+    // Calculate total expenses within the period
+    const totalExpenses = maintenanceExpenses.reduce((acc, expense) => acc + expense.amount, 0) +
+                          otherExpenses.reduce((acc, expense) => acc + expense.amount, 0);
+
+    // Calculate profit (total sales - total expenses)
+    const profit = totalSales - totalExpenses;
+
+    res.status(200).json({
+      success: true,
+      data: {
+        sales: snookerSalesWithinPeriod,
+        maintenanceExpenses,
+        otherExpenses,
+        profit
+      }
+    });
+  } catch (error) {
+    console.error('Error getting sales and expenses within the specified period:', error);
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+};

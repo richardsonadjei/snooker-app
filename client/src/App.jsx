@@ -12,6 +12,7 @@ import AllExpenseReport from './Pages/reports/AllExpenseReport';
 import SignIn from './Pages/SignIn';
 import CreateNewUser from './Pages/NewUser';
 import Home from './Pages/Home';
+import SalesAndExpensesWithinPeriod from './Pages/reports/Profit';
 
 
 
@@ -34,6 +35,7 @@ export default function App() {
           <Route path='/add-maintenance-expense' element={<RecordMaintenance/>} />
           <Route path='/add-other-expense' element={<RecordOtherExpense/>} />
           <Route path='/all-expense-report' element={<AllExpenseReport/>} />
+          <Route path='/profit' element={<SalesAndExpensesWithinPeriod/>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -119,23 +119,29 @@ const SalesAndExpensesWithinPeriod = () => {
                   <thead className="thead-dark">
                     <tr>
                       <th>Date</th>
-                      <th>Amount</th>
                       <th>Type</th>
+                      <th>Amount</th>
+                      <th>Description</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
                     {salesAndExpenses.maintenanceExpenses && salesAndExpenses.maintenanceExpenses.map((expense, index) => (
                       <tr key={index}>
                         <td>{formatDate(expense.date)}</td>
-                        <td>{expense.amount}</td>
                         <td>Maintenance Expense</td>
+                        <td>{expense.amount}</td>
+                        <td>{expense.description}</td>
+                        
                       </tr>
                     ))}
                     {salesAndExpenses.otherExpenses && salesAndExpenses.otherExpenses.map((expense, index) => (
                       <tr key={index}>
                         <td>{formatDate(expense.date)}</td>
-                        <td>{expense.amount}</td>
                         <td>Other Expense</td>
+                        <td>{expense.amount}</td>
+                        <td>{expense.description}</td>
+                        
                       </tr>
                     ))}
                   </tbody>
